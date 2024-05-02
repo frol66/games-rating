@@ -1,3 +1,7 @@
+/*
+package.json потерял (((
+*/
+
 const http = require("http");
 const path = require("path");
 
