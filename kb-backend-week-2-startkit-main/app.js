@@ -1,7 +1,7 @@
 /*
-package.json потерял (((
+package.json и 
+package-lock.json потерял, тупо нигде его нет(((( 
 */
-
 const http = require("http");
 const path = require("path");
 
@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
             gameRouteController(res);
             break;
         case "/vote":
-            voteRouteController(res);
+            voteRouteController(req, res);
             break;
         default:
             defaultRouteController(res, url);

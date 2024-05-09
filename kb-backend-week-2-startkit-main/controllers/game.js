@@ -7,7 +7,8 @@ async function gameRouteController(res) {
         if (err) {
             res.statusCode = 500;
             res.end("Internal Server Error");
-        }
+        };
+        res.statusCode = 200;
         const data = JSON.parse(ratingFile);
         const game = getRandomGame(data);
         res.setHeader("Content-Type", "application/json");

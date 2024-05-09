@@ -1,6 +1,8 @@
 const httpUtils = require("../appModules/http-utils");
-const { createRating, config, updateRating } = require("../rating");
+const { createRating, config, updateRating } = require("../appModules/rating");
 const fs = require("fs").promises;
+
+
 
 async function voteRouteController(req, res) {
     if (req.method !== "POST") {
@@ -24,6 +26,7 @@ async function voteRouteController(req, res) {
         res.end(JSON.stringify(newRating.sort((a,b) => b.rating - a.rating )));
 
     }
+
 }
 
 module.exports = voteRouteController;

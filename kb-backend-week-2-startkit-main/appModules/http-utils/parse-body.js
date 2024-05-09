@@ -6,7 +6,12 @@ function parseBody(req) {
         });
         req.on("end", () => {
             resolve(body);
-        });
+            
+        })
+        req.on("error", (error) => {
+            resolve(error, null);
+        }
+        );
     });
 }
 
